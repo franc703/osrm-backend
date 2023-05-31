@@ -1,14 +1,5 @@
-# Use build arguments for Python version
-ARG VARIANT="3.10-bullseye"
-ARG NODE_VERSION="none"
-
-# Use specific version of Python
-# FROM mcr.microsoft.com/vscode/devcontainers/python:0-${VARIANT}
-
 # Install Python and other dependencies
 RUN apt-get update && apt-get install -y \
-    python3 \
-    python3-pip \
     git \
     cmake \
     build-essential \
