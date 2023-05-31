@@ -24,12 +24,12 @@ RUN apt-get update && apt-get install -y \
 # Clone OSRM-backend
 RUN git clone --branch v5.27.1 https://github.com/Project-OSRM/osrm-backend.git
 
-WORKDIR /src/osrm-backend
+#WORKDIR /src/osrm-backend
 
 # Download and apply the TBB patch
-RUN wget -O patch-6497-fix-tbbparallelpipeline.patch https://patch-diff.githubusercontent.com/raw/Project-OSRM/osrm-backend/pull/6493.patch && \
-    patch -p1 < patch-6497-fix-tbbparallelpipeline.patch && \
-    rm patch-6497-fix-tbbparallelpipeline.patch
+#RUN wget -O patch-6497-fix-tbbparallelpipeline.patch https://patch-diff.githubusercontent.com/raw/Project-OSRM/osrm-backend/pull/6493.patch && \
+   # patch -p1 < patch-6497-fix-tbbparallelpipeline.patch && \
+    #rm patch-6497-fix-tbbparallelpipeline.patch
 
 
 # Build OSRM-backend
