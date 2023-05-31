@@ -7,7 +7,15 @@ FROM mcr.microsoft.com/vscode/devcontainers/python:0-${VARIANT}
 RUN apt-get update && export DEBIAN_FRONTEND=noninteractive \
     && apt-get -y install --no-install-recommends vim \
      build-essential \
-     cmake 
+     cmake \
+     git \
+    libboost-all-dev \
+    liblua5.2-dev \
+    libstxxl-dev \
+    libtbb-dev \
+    libbz2-dev \
+    libexpat1-dev \
+    libprotobuf-dev
 #RUN apt-get update && apt-get install -y \
  #   build-essential \
  #   cmake \
