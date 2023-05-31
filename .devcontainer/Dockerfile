@@ -5,7 +5,9 @@ FROM mcr.microsoft.com/vscode/devcontainers/python:0-${VARIANT}
 
 # Install dependencies
 RUN apt-get update && export DEBIAN_FRONTEND=noninteractive \
-    && apt-get -y install --no-install-recommends vim
+    && apt-get -y install --no-install-recommends vim \
+     build-essential \
+     cmake 
 #RUN apt-get update && apt-get install -y \
  #   build-essential \
  #   cmake \
