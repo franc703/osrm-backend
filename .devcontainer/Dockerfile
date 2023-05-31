@@ -18,8 +18,8 @@ RUN apt-get update && apt-get install -y \
     lua5.2 \
     pkg-config \
     wget \
-    patch \
-    && rm -rf /var/lib/apt/lists/*
+    patch #\
+    #&& rm -rf /var/lib/apt/lists/*
 
 # Clone OSRM-backend
 #RUN git clone --branch v5.27.1 https://github.com/Project-OSRM/osrm-backend.git
