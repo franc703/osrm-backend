@@ -33,8 +33,8 @@ RUN wget -O patch-6497-fix-tbbparallelpipeline.patch https://patch-diff.githubus
 
 
 # Build OSRM-backend
-RUN mkdir -p build
-WORKDIR /src/osrm-backend/build
-RUN cmake .. -DCMAKE_BUILD_TYPE=Release
-RUN make
-RUN make install
+#RUN mkdir -p build
+#WORKDIR /src/osrm-backend/build
+#RUN cmake .. -DCMAKE_BUILD_TYPE=Release
+#RUN make
+#RUN make install
