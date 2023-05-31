@@ -1,6 +1,6 @@
 FROM python:3.10-bullseye
 
-WORKDIR /src
+#WORKDIR /src
 
 # Install dependencies
 RUN apt-get update && apt-get install -y \
