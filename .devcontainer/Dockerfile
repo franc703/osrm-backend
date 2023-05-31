@@ -1,24 +1,27 @@
-FROM python:3.10-bullseye
+ARG VARIANT="3.10-bullseye"
+FROM mcr.microsoft.com/vscode/devcontainers/python:0-${VARIANT}
 
 #WORKDIR /src
 
 # Install dependencies
-RUN apt-get update && apt-get install -y \
-    build-essential \
-    cmake \
-    git \
-    libboost-all-dev \
-    liblua5.2-dev \
-    libstxxl-dev \
-    libtbb-dev \
-    libbz2-dev \
-    libexpat1-dev \
-    libprotobuf-dev \
-    protobuf-compiler \
-    lua5.2 \
-    pkg-config \
-    wget \
-    patch 
+RUN apt-get update && export DEBIAN_FRONTEND=noninteractive \
+    && apt-get -y install --no-install-recommends vim
+#RUN apt-get update && apt-get install -y \
+ #   build-essential \
+ #   cmake \
+ #   git \
+ #   libboost-all-dev \
+ #   liblua5.2-dev \
+ #   libstxxl-dev \
+ #   libtbb-dev \
+ #   libbz2-dev \
+ #   libexpat1-dev \
+ #   libprotobuf-dev \
+ #   protobuf-compiler \
+ #   lua5.2 \
+ #   pkg-config \
+ #   wget \
+ #   patch 
     #&& rm -rf /var/lib/apt/lists/*
 
 # Clone OSRM-backend
